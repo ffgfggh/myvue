@@ -4,12 +4,12 @@
       <el-header style="text-align: right; font-size: 12px">
         <span class="logo">xxx后台管理系统</span>
         <el-dropdown>
-          <el-badge :value="12" class="item">
+          <!-- <el-badge :value="12" class="item">
             <el-button size="small">评论</el-button>
           </el-badge>
           <el-badge :value="3" class="item">
             <el-button size="small">回复</el-button>
-          </el-badge>
+          </el-badge>-->
 
           <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" style="margin-top: 8px"></el-avatar>
           <el-dropdown-menu slot="dropdown">
