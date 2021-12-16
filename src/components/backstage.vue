@@ -8,14 +8,7 @@
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item>查看</el-dropdown-item>
             <el-dropdown-item>新增</el-dropdown-item>
-            <el-popover placement="top" width="160" v-model="visible">
-              <p>你确定退出当前账号吗</p>
-              <div style="text-align: right; margin: 0">
-                <el-button size="mini" type="text" @click="visible = false">取消</el-button>
-                <el-button type="primary" size="mini" @click="visible = false">确定</el-button>
-              </div>
-              <el-button slot="reference">退出</el-button>
-            </el-popover>
+            <el-button type="info" @click="logout">退出</el-button>
           </el-dropdown-menu>
         </el-dropdown>
         <span>xxx</span>
@@ -102,6 +95,23 @@ body {
 .el-aside {
   color: #333;
 }
+.el-button {
+  background-color: #fff;
+  color: #545c64;
+  border: none;
+}
+.el-button:hover {
+  background-color: #ecf5ff;
+  color: #66b1ff;
+}
 </style>
 <script>
+export default {
+  methods: {
+    logout() {
+      window.sessionStorage.clear()
+      this.$router.push('/')
+    }
+  }
+}
 </script>
